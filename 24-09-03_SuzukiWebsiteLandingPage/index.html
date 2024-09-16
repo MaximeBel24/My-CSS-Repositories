@@ -10,12 +10,19 @@
     <section class="main">
         <header>
             <a href="#"><img src="logo.png" alt="logo" class="logo"></a>
-            <ul class="navigation">
-                <li><a href="#">Top Features</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Store</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            <div class="group">
+                <div class="toggle"></div>
+                <ul class="navigation">
+                    <li><a href="#">Top Features</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="dayNight">
+                    <ion-icon name="sunny-outline" class="active"></ion-icon>
+                    <ion-icon name="moon-outline"></ion-icon>
+                </div>
+            </div>
         </header>
         <div class="content">
             <h2>Ready To <span>Race</span></h2>
@@ -55,5 +62,6 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

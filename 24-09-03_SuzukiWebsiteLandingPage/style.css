@@ -12,6 +12,12 @@
     --white: #fff;
     --red: #f83038;
 }
+.light
+{
+    --black: #fff;
+    --white: #2f2f2f;
+    --red: #f83038;
+}
 .main
 {
     position: relative;
@@ -23,6 +29,10 @@
     align-items: center;
     flex-direction: column;
 }
+.light .main
+{
+    background: #fff;
+}
 .main::before
 {
     content: 'Adventure';
@@ -33,6 +43,10 @@
     font-size: 16vw;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.05);
+}
+.light .main::before
+{
+    color: rgba(0, 0, 0, 0.05);
 }
 header
 {
@@ -48,6 +62,10 @@ header
 .logo
 {
     max-width: 80px;
+}
+.light .logo
+{
+    filter: invert(1);
 }
 .navigation
 {
@@ -102,6 +120,10 @@ header
     font-size: 1.25em;
     transition: 0.25s;
 }
+.light .btn
+{
+    color: #fff;
+}
 .btn:hover
 {
     letter-spacing: 4px;
@@ -152,6 +174,10 @@ header
     cursor: pointer;
     margin-left: 10px;
 }
+.light .dots .dot
+{
+    background: rgba(0, 0, 0, 0.2);
+}
 .dots .dot.active
 {
     background: var(--white);
@@ -159,7 +185,7 @@ header
 .slider .slides
 {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 0;
     transform: translateY(-50%);
     z-index: 10;
@@ -174,11 +200,16 @@ header
 .slider .slides.active
 {
     opacity: 1;
+    top: 50%;
 }
 .slider .slides h2
 {
     color: var(--white);
     font-size: 3em;
+}
+.slider .slides h2:last-child
+{
+    text-align: end;
 }
 .slider .slides h2 span
 {
@@ -186,4 +217,177 @@ header
     font-size: 0.5em;
     font-weight: 400;
     font-style: italic;
+}
+
+/* Day Night Mode */
+.group
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.group .dayNight
+{
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    cursor: pointer;
+}
+.group .dayNight ion-icon
+{
+    position: absolute;
+    font-size: 1.5em;
+    display: none;
+}
+.group .dayNight ion-icon:nth-child(1),
+.group .dayNight.active ion-icon:nth-child(2)
+{
+    display: block;
+}
+.group .dayNight ion-icon:nth-child(2),
+.group .dayNight.active ion-icon:nth-child(1)
+{
+    display: none;
+}
+
+/* Responsive */
+
+@media(max-width: 991px)
+{
+    .main
+    {
+        padding: 40px;
+    }
+    header
+    {
+        padding: 20px 40px;
+    }
+    .slider
+    {
+        position: relative;
+        width: 100%;
+        height: 180px;
+    }
+    .slider .slides
+    {
+        position: absolute;
+        top: initial;
+        top: 50%;
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .slider .slides h2
+    {
+        font-size: 2.5em;
+        text-align: center;
+    }
+    .slider .slides h2:last-child
+    {
+        text-align: center;
+    }
+    .bike
+    {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+    .footer
+    {
+        position: relative;
+        margin-top: 50px;
+        flex-direction: column-reverse;
+        padding: 0 40px;
+    }
+    .sci
+    {
+        margin-top: 40px;
+    }
+    .content h2
+    {
+        font-size: 3em;
+    }
+    .toggle
+    {
+        position: relative;
+        width: 32px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .toggle.active
+    {
+        position: fixed;
+        top: 30px;
+        right: 40px;
+    }
+    .toggle::before
+    {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: var(--white);
+        transform: translateY(-10px);
+        transition: 0.25s;
+        box-shadow: 0 10px 0 var(--white);
+    }
+    .toggle.active::before
+    {
+        transform: translateY(0) rotate(45deg);
+        box-shadow: 0 0 0 var(--white);
+    }
+    .toggle::after
+    {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: var(--white);
+        transform: translateY(10px);
+        transition: 0.25s;
+    }
+    .toggle.active::after
+    {
+        transform: translateY(0) rotate(-45deg);
+    }
+    .navigation
+    {
+        display: none;
+    }
+    .navigation.active
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 999;
+        background: var(--black);
+    }
+    .navigation li a
+    {
+        font-size: 1.5em;
+        margin: 10px 0;
+        display: inline-block;
+    }
+    .group
+    {
+        flex-direction: row-reverse;
+    }
+    .group .dayNight
+    {
+        margin-right: 10px;
+    }
 }
