@@ -1,0 +1,25 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background: #2e2c39;
+}
+.cursor
+{
+    position: absolute;
+    pointer-events: none;
+}
+.cursor span
+{
+    position: absolute;
+    width: 12px;
+    height: 60px;
+    background: #fff;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+    border-top: 60px solid darkred;
+    border-bottom: 60px solid darkred;
+}
