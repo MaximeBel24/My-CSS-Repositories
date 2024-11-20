@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #18191a;
+}
+.container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.container .box
+{
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    background: #242526;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+.container .box .icon
+{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 48px;
+    font-weight: 700;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.container .box .icon::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: 0.5s;
+}
+.container .box:hover .icon::before
+{
+    opacity: 1;
+}
+.container .box .icon span
+{
+    position: relative;
+    z-index: 1000;
+}
+.container .box:nth-child(1) .icon
+{
+    box-shadow: 0 0 0 0 #9dce52;
+    background: #9dce52;
+}
+.container .box:nth-child(1):hover .icon
+{
+    box-shadow: 0 0 0 400px #9dce52;
+}
+
+
+.container .box:nth-child(2) .icon
+{
+    box-shadow: 0 0 0 0 #f45c51;
+    background: #f45c51;
+}
+.container .box:nth-child(2):hover .icon
+{
+    box-shadow: 0 0 0 400px #f45c51;
+}
+
+
+.container .box:nth-child(3) .icon
+{
+    box-shadow: 0 0 0 0 #00aa98;
+    background: #00aa98;
+}
+.container .box:nth-child(3):hover .icon
+{
+    box-shadow: 0 0 0 400px #00aa98;
+}
+.container .box .content
+{
+    position: relative;
+    z-index: 10000;
+    transition: 0.5s;
+    color: #fff;
+}
+.container .box .content h3
+{
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin: 10px 0 0;
+    font-weight: 600;
+}
+.container .box .content a
+{
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+.container .box .content a:hover
+{
+    background: rgba(0, 0, 0, 0.5);
+}
