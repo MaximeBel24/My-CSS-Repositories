@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Glassmorphism Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="imgBx">
+                <img src="img1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Card One</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error aliquam, optio architecto quibusdam alias corrupti tempora eum eveniet tenetur perferendis cupiditate</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="img2.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Card Two</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error aliquam, optio architecto quibusdam alias corrupti tempora eum eveniet tenetur perferendis cupiditate</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="img1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Card Three</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error aliquam, optio architecto quibusdam alias corrupti tempora eum eveniet tenetur perferendis cupiditate</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        });
+    </script>
+</body>
+</html>
