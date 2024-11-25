@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    width: 400px;
+    min-height: 400px;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    overflow: hidden;
+}
+
+.card > h1 {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.inputPair {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    min-width: 0;
+}
+
+.inputPair > label, .row span {
+    font-size: .9rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.inputPair > label {
+    margin-bottom: 5px;
+}
+
+.inputPair > input {
+    border-radius: .375rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    line-height: 40px;
+    padding: 0 10px;
+    outline: none;
+    font-size: 1rem;
+    transition: ease .3s;
+}
+
+.inputPair > input:focus {
+    border-color: #07f;
+    background: #0077ff05;
+}
+
+.pairRow {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    column-gap: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 15px 0;
+}
+
+hr {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+#pay {
+    width: 100%;
+    height: 50px;
+    border-radius: .75rem;
+    border: none;
+    margin-top: 10px;
+    color: white;
+    background: #003fff;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.highlight {
+    background: rgba(0, 0, 100, 0.02);
+    margin: -40px;
+    margin-top: 20px;
+    padding: 40px;
+    padding-top: 20px;
+}
