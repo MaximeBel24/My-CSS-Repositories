@@ -1,0 +1,84 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222327;
+}
+.menu
+{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    /* background: #ccc; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu li
+{
+    position: absolute;
+    left: 0;
+    list-style: none;
+    transform-origin: 150px;
+    transform: rotate(calc(360deg / 8 * var(--i)));
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+.menu.active li
+{
+    transition-delay: 0.5s;
+    opacity: 1;
+    visibility: visible;
+}
+.menu li a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.75em;
+    color: #222327;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    transition: background 1s;
+}
+.menu li a:hover
+{
+    background: #29fd53;
+    border: 2px solid #222327;
+    transition: background 0s;
+}
+.toggle
+{
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: #fff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-delay: 0.25s;
+}
+.toggle.active
+{
+    transform: rotate(315deg);
+    box-shadow: 0 0 0 55px #222327,
+    0 0 0 120px #fff;
+    border-radius: 50%;
+    transition-delay: 0s;
+}
